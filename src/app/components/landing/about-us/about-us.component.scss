@@ -1,0 +1,52 @@
+.wrap-container {
+	padding-top: 200px;
+	background-color: white;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 85px;
+}
+
+h2 {
+	margin-bottom: 50px;
+}
+
+h4 {
+	max-width: 545px;
+	line-height: 140%;
+}
+
+img {
+	width: 654px;
+	height: 500px;
+}
+
+
+
+.bottom {
+	display: flex;
+	justify-content: space-between;
+
+	h4 {
+		margin-bottom: 15px;
+	}
+
+	.left {
+		max-width: 545px;
+	}
+
+	.right {
+		max-width: 654px;
+
+		.block {
+			margin-bottom: 50px;
+		}
+	}
+
+	p {
+		line-height: 140%;
+	}
+}

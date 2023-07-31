@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('./styles/reset.scss');
+@import url('./styles/media-queries.scss');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #1D1D1B;
+}
+
+body {
+	background: #F8F8F8;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		width: 0px;
+		background: white;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 0px;
+		background: black; 
+	}
+}
+
+h1 {
+	font-size: 80px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 64px;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+p {
+	font-weight: 400;
+
+	&.faded {
+		opacity: 0.9;
+		b {
+			font-weight: 500;
+		}
+	}
+}
+
+.wrap-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+button {
+	width: 320px;
+	height: 60px;	
+	border: 1px solid rgba(29, 29, 27, 0.20);
+	background: #1D1D1B;
+	
+	font-weight: 500;
+	color: #FFF;
+}

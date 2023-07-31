@@ -1,0 +1,14 @@
+
+<!-- * Pc header * -->
+<app-pc-header
+	(onClickList)="onClickList($event)"
+	[isSticky]="isSticky"
+	*ngIf="!isMobile else mobileHeader">
+</app-pc-header>
+<!-- * End Pc header * -->
+
+<!-- * Mobile header * -->
+<ng-template #mobileHeader>
+	<app-mobile-header></app-mobile-header>
+</ng-template>
+<!-- * End Mobile header * -->

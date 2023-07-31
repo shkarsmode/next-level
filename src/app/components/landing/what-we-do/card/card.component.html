@@ -1,0 +1,13 @@
+<div class="wrap"> <!-- (mousemove)="onMouseMove($event)" (mouseout)="onMouseOut()" -->
+	<div 
+		class="card" 
+		#cardElement>
+		<div class="wrap-img">
+			<img 
+				[src]="imgPath + card.image + imgExtension" 
+				[alt]="card.image">
+		</div>
+		<h4>{{ card.header }}</h4>
+		<p class="faded">{{ card.description }}</p>
+	</div>
+</div>
