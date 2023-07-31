@@ -1,0 +1,75 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+	<div class="field">
+		<input 
+			type="text" 
+			placeholder="Your name"
+			formControlName="name">
+		<div 
+			class="hint error"
+			*ngIf="name.invalid && name.touched">
+			<div *ngIf="name.errors?.['required']">
+				Required area
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
+		<input 
+			type="text" 
+			name="email" 
+			placeholder="Your email"
+			formControlName="email">
+		<div 
+			class="hint error"
+			*ngIf="email.invalid && email.touched">
+			<div *ngIf="email.errors?.['required']">
+				Required area
+			</div>
+			<div *ngIf="email.errors?.['email']">
+				Incorrect email address
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
+		<input 
+			type="tel"
+			name="tel"
+			placeholder="Your Phone"
+			formControlName="tel">
+		<div 
+			class="hint error"
+			*ngIf="tel.invalid && tel.touched">
+			<div *ngIf="tel.errors?.['required']">
+				Required area
+			</div>
+			<div *ngIf="tel.errors?.['pattern'] || tel.errors?.['minlength']">
+				Incorrect phone number
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
+		<textarea
+			type="text" 
+			placeholder="Your message"
+			formControlName="message">
+		</textarea>
+		<div 
+			class="hint"
+			*ngIf="message.invalid && message.dirty && message.errors?.['minlength']">
+			<div>
+				At least
+				{{ 
+					message.errors?.['minlength'].requiredLength - message.value.length 
+				}} more characters
+			</div>
+		</div>
+	</div>
+
+	<button 
+		type="submit" 
+		[disabled]="form.invalid && form.touched">
+		Submit
+	</button>
+</form>

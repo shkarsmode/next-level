@@ -1,8 +1,4 @@
 .card {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
 	user-select: none;
 
 	width: 412px;
@@ -11,7 +7,7 @@
 	border: 1px solid rgba(29, 29, 27, 0.10);
 	background: #FFF;
 	padding: 0 50px;
-	padding-top: 60px;
+	padding-top: 65px;
 	perspective: 500px;
 	transition: all .2s ease;
 
