@@ -10,6 +10,8 @@ header {
 img {
 	filter: drop-shadow(2px 4px 3px rgb(226, 226, 226));
 	user-select: none;
+	height: auto;
+	width: auto;
 }
 
 ul {
@@ -48,6 +50,7 @@ ul {
 
 	img {
 		width: 230px;
+		height: auto;
 		filter: none;
 	}
 
