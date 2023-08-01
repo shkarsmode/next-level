@@ -7,6 +7,7 @@ form {
 	padding: 100px 0;
 	background-color: white;
 	width: 848px;
+	transition: background-color .3s;
 }
 
 .field {
@@ -110,5 +111,29 @@ button {
 	&:disabled {
 		opacity: 0.3;
 		pointer-events: none;
+	}
+}
+
+@media (max-width: 1000px) {
+	form {
+		padding: 75px;
+		background-color: white;
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	form {
+		width: 100vw;
+
+		padding: 0px 15px;
+		background-color: transparent;
+		input, textarea {
+			width: 100%;
+		}
+
+		.field {
+			width: 100%;
+		}
 	}
 }

@@ -15,4 +15,12 @@ h2 {
 
 p {
 	margin-bottom: 60px;
+	text-align: center;
+	
+}
+
+@media (max-width: 500px) {
+	.wrap-container {
+		padding: 100px 0;
+	}
 }
