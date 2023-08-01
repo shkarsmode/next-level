@@ -48,7 +48,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon-black.ico",
+              "src/favicon-light.ico",
               "src/assets"
             ],
             "styles": [
@@ -111,7 +112,8 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon-black.ico",
+              "src/favicon-light.ico",
               "src/assets"
             ],
             "styles": [

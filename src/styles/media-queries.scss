@@ -13,12 +13,18 @@
 
 @media (min-width: 961px) and (max-width: 1279px) {
 	.container {
-		max-width: 960px;
+		max-width: 920px;
 	}
 }
 
 @media (min-width: 961px) and (max-width: 959px) {
 	.container {
 		max-width: 850px;
+	}
+}
+
+@media (max-width: 960px) {
+	.container {
+		padding: 0 15px;
 	}
 }

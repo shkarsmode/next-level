@@ -1,1 +1,37 @@
-<p>mobile-header works!</p>
+<div class="wrap-container" [ngClass]="{'sticky': isSticky, 'open': isOpenMenu}">
+	<div class="container">
+		<header>
+			<img src="assets/img/logo-black.webp" alt="logo" (click)="onClickLi('banner', 200)">
+			<div class="burger" (click)="toggleMenu()">
+				<div></div>
+				<div></div>
+			</div>
+		</header>
+		<ul>
+			<li 
+				style="--i:0s"
+				(click)="onClickLi('about')">
+				About us
+			</li>
+			<li 
+				style="--i:0.15s"
+				(click)="onClickLi('story')">
+				Founder's Story
+			</li>
+			<li 
+				style="--i:0.3s"
+				(click)="onClickLi('contact')">
+				Contact us
+			</li>
+			<li style="--i:0.45s">
+				Terms of Use
+			</li>
+			<li style="--i:0.6s">
+				Privacy Policy
+			</li>
+		</ul>
+		<div class="copy">
+			© 2023 Next Level Oncology
+		</div>
+	</div>
+</div>

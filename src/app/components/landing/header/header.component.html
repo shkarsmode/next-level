@@ -9,6 +9,9 @@
 
 <!-- * Mobile header * -->
 <ng-template #mobileHeader>
-	<app-mobile-header></app-mobile-header>
+	<app-mobile-header
+		(onClickList)="onClickList($event)"
+		[isSticky]="isSticky">
+	</app-mobile-header>
 </ng-template>
 <!-- * End Mobile header * -->

@@ -11,8 +11,10 @@ img {
 	filter: drop-shadow(2px 4px 3px rgb(226, 226, 226));
 	user-select: none;
 	height: auto;
-	width: auto;
+	width: 314px;
 	cursor: pointer;
+	
+	transition: all .3s;
 }
 
 ul {
@@ -22,6 +24,7 @@ ul {
 	li {
 		position: relative;
 		font-weight: 500;
+		transition: all .3s;
 		cursor: pointer;
 
 		&:after {
@@ -62,5 +65,30 @@ ul {
 			font-size: 14px;
 		}
 	}
+	
+}
+
+@media (max-width: 910px) {
+	img {
+		width: 260px;
+	}
+	
+	ul {
+		column-gap: 40px;
+	}
+}
+
+@media (max-width: 725px) {
+	img {
+		width: 220px;
+	}
+	
+	ul {
+		column-gap: 24px;
+		li {
+			font-size: 14px;
+		}
+	}
+
 	
 }
