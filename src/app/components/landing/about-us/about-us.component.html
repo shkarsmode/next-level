@@ -25,13 +25,24 @@
 						Medicine changed drastically over the last decade, as physicians struggle to manage immense rosters of patients, and where the increasingly complex demands of <b>medical bureaucracy are overwhelming the ability of large practices and hospitals to build meaningful relationships with the people in their care.</b> Most alarmingly, we’ve seen patients grow accustomed to not knowing their doctors, even as they feel more daunted by the medical system they’re required to navigate in times of need when urgency and attention to the patient matter most. <b>Our mission is to change that.</b> 
 					</p>
 				</div>
-				<div class="block">
+				<div class="block showing-block" [ngClass]="{'active': isShowMore}">
 					<h4>Patient-first approach</h4>
 					<p class="faded">
 						<b>At Next Level Oncology, we’re dedicated to creating better and happier lives by building deeper, more lasting connections to our patients.</b> We combine our patient-first values with the best of personalized diagnostics, preventative care and treatments both supportive and therapeutic to treat the person as a whole, and to help our patients achieve their fullest, best lives possible. To make that possible, we’ve committed ourselves to getting to know you, because we believe that you deserve more than the highest quality of care. <b>We believe that you deserve exceptional care on your own terms, based on your needs, just as you are.</b> That’s our promise.
 					</p>
 				</div>
 			</div>
+		</div>
+		<div class="show-more" (click)="toggleList()">
+			<span *ngIf="!isShowMore">
+				Show more 
+			</span>
+			<span *ngIf="isShowMore">
+				Show less 
+			</span>
+			<svg [ngClass]="{'active': isShowMore}" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+				<path d="M1 1L6 6L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+			</svg>
 		</div>
 	</div>
 </div>

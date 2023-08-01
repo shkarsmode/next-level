@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
 
+    public isShowMore: boolean = false;
+
+    public toggleList(): void {
+        this.isShowMore = !this.isShowMore;
+    }
 }
