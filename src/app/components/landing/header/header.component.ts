@@ -2,6 +2,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CustomBreakpoints, CustomBreakpointsEnum } from 'src/shared/interfaces/ICustomBreakpoints';
+import { ScrollToService } from '../../../../shared/services/scroll-to.service';
 
 @Component({
     selector: 'app-header',
@@ -14,7 +15,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     public isSticky: boolean = false;
     private subscriptions: Subscription[] = [];
 
-    constructor(private breakpointObserver: BreakpointObserver) {
+    constructor(
+        private breakpointObserver: BreakpointObserver,
+        private scrollTo: ScrollToService
+    ) {
         this.subscribeOnBreakpointChanges();
     }
 
@@ -29,8 +33,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isSticky = currentScroll > 200 ? true : false;
     }
 
-    public onClickList(li: string): void {
-
+    public onClickList({selector, speed}: {selector: string, speed: number}): void {
+        this.scrollTo.scroll(selector, speed);
     }
 
     private subscribeOnBreakpointChanges(): void {

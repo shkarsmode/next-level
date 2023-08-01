@@ -7,10 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PcHeaderComponent {
 
-    @Output() onClickList: EventEmitter<string> = new EventEmitter();
+    @Output() onClickList: EventEmitter<{selector: string, speed: number}> = new EventEmitter();
     @Input() isSticky: boolean = false;
 
-    public onClickLi(li: string): void {
-        this.onClickList.emit(li);
+    public onClickLi(selector: string, speed: number = 1000): void {
+        this.onClickList.emit({selector, speed});
     }
 }

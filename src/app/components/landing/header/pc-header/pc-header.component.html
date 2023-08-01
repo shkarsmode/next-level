@@ -1,14 +1,14 @@
 <div class="wrap-container" [ngClass]="{'sticky': isSticky}">
 	<div class="container">
 		<header>
-			<img src="assets/img/logo-black.webp" alt="logo">
+			<img src="assets/img/logo-black.webp" alt="logo" (click)="onClickLi('banner', 200)">
 			<ul>
 				<li 
 					(click)="onClickLi('about')">
 					About us
 				</li>
 				<li 
-					(click)="onClickLi('stories')">
+					(click)="onClickLi('story')">
 					Founder's Story
 				</li>
 				<li 

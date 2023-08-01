@@ -26,7 +26,8 @@ const declarations = [
     AboutUsComponent,
     FounderStoryComponent,
     ContactComponent,
-    FormComponent
+    FormComponent,
+    FooterComponent
 ];
 
 @NgModule({
@@ -34,6 +35,6 @@ const declarations = [
     imports: [
         CommonModule, 
         ReactiveFormsModule
-    ],
+    ]
 })
 export class LandingModule {}
