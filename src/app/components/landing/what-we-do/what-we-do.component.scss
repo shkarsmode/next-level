@@ -24,3 +24,21 @@ h2 {
 	justify-content: space-between;
 	column-gap: 24px;
 }
+
+@media (max-width: 1300px) {
+	.wrap-cards {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 24px;
+	}
+}
+
+@media (max-width: 500px) {
+	.wrap-container {
+		padding: 100px 0;
+	}
+
+	h4 {
+		margin-bottom: 100px;
+	}
+}

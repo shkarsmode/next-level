@@ -14,6 +14,7 @@ export class MobileHeaderComponent {
 
     public onClickLi(selector: string, speed: number = 1000): void {
         this.onClickList.emit({selector, speed});
+        this.toggleMenu();
     }
 
     public toggleMenu(): void {
