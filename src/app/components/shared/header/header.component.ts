@@ -33,7 +33,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isSticky = currentScroll > 200 ? true : false;
     }
 
-    public onClickList({selector, speed}: {selector: string, speed: number}): void {
+    public async onClickList({selector, speed}: {selector: string, speed: number}): Promise<void> {
+        await new Promise(resolve => setTimeout(resolve, 50));
         this.scrollTo.scroll(selector, speed);
     }
 
