@@ -1,0 +1,43 @@
+.container {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.container ::ng-deep {
+	b {
+		font-weight: 500;
+		font-size: 24px;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	ol {
+		list-style-type: decimal;
+		padding-left: 20px;
+
+		&::nth-child(1) {
+			padding-left: 140px;
+		}
+
+		li {
+			font-weight: 500;
+			font-size: 18px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+	}
+
+	i {
+		font-style: italic;
+	}
+
+	> p:first-child {
+		font-size: 50px !important;
+	}
+
+	h4 {
+		margin-top: 50px;
+	}
+}

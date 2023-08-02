@@ -1,12 +1,16 @@
 <div class="wrap-container">
 	<div class="container">
 		<footer>
-			<img src="assets/img/logo-white.webp" alt="logo" (click)="onClickLi('banner')">
+			<img 
+				routerLink="/"
+				src="assets/img/logo-white.webp" 
+				alt="logo" 
+				(click)="onClickLi('banner')">
 			<ul>
-				<li>
+				<li routerLink="/privacy-center/terms-and-conditions">
 					Terms of Use
 				</li>
-				<li>
+				<li routerLink="/privacy-center/privacy-policy">
 					Privacy Policy
 				</li>
 				<li class="copy">
