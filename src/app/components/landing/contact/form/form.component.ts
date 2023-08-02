@@ -11,6 +11,7 @@ import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.co
 export class FormComponent implements OnInit {
 
     public form: FormGroup;
+    public isLoading: boolean = false;
     private dialogConfig: MatDialogConfig = new MatDialogConfig();
 
     constructor(
@@ -21,7 +22,6 @@ export class FormComponent implements OnInit {
     public ngOnInit(): void {
         this.initForm();
         this.initDialogConfig();
-        this.openLoginModalWindow();
     }
 
 
@@ -29,6 +29,7 @@ export class FormComponent implements OnInit {
         this.dialogConfig.autoFocus = false;
         this.dialogConfig.width = '375px';
         this.dialogConfig.height = '455px';
+        this.dialogConfig.maxWidth = '100%';
     }
 
     public openLoginModalWindow(): void {
@@ -48,12 +49,17 @@ export class FormComponent implements OnInit {
         });
     }
 
-    public onSubmit(): void {
-        console.log('onSubmit');
-        if (this.form.valid) {
-          // Handle form submission here
-            console.log('Form submitted', this.form.value);
-        }
+    public async onSubmit(): Promise<void> {
+        if (this.form.invalid || this.isLoading) return;
+
+        this.isLoading = true;
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        this.isLoading = false;
+
+        this.openLoginModalWindow();
+        console.log('Form submitted', this.form.value);
+        
     }
 
     public get name (): AbstractControl {

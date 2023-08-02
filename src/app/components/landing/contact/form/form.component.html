@@ -72,4 +72,8 @@
 		[disabled]="form.invalid && form.touched">
 		Submit
 	</button>
+
+	<div class="wrap-loading" *ngIf="isLoading">
+		<mat-spinner></mat-spinner>
+	</div>
 </form>
