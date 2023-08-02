@@ -1,8 +1,8 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CustomBreakpoints, CustomBreakpointsEnum } from 'src/shared/interfaces/ICustomBreakpoints';
-import { ScrollToService } from '../../../../shared/services/scroll-to.service';
+import { CustomBreakpoints, CustomBreakpointsEnum } from 'src/app/shared/interfaces/ICustomBreakpoints';
+import { ScrollToService } from 'src/app/shared/services/scroll-to.service';
 
 @Component({
     selector: 'app-header',
@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     public ngOnInit(): void {
         this.determineShowingHeader();
     }
-
 
     @HostListener('window:scroll')
     public determineShowingHeader(): void {

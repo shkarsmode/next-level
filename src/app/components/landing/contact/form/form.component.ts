@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.component';
 
 @Component({
     selector: 'app-form',
@@ -9,11 +11,28 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 export class FormComponent implements OnInit {
 
     public form: FormGroup;
+    private dialogConfig: MatDialogConfig = new MatDialogConfig();
 
-    constructor(private formBuilder: FormBuilder) {}
+    constructor(
+        private formBuilder: FormBuilder,
+        private dialog: MatDialog,
+    ) {}
 
     public ngOnInit(): void {
         this.initForm();
+        this.initDialogConfig();
+        this.openLoginModalWindow();
+    }
+
+
+	private initDialogConfig(): void {
+        this.dialogConfig.autoFocus = false;
+        this.dialogConfig.width = '375px';
+        this.dialogConfig.height = '455px';
+    }
+
+    public openLoginModalWindow(): void {
+        this.dialog.open(ThankYouComponent, { ...this.dialogConfig });
     }
 
     private initForm(): void {

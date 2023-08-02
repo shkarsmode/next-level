@@ -1,0 +1,100 @@
+.wrap {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	background-color: #1D1D1B;
+	overflow: hidden;
+
+	* {
+		color: white;
+	}
+}
+
+h2 {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.description {
+	max-width: 260px;
+	text-align: center;
+	letter-spacing: .5px;
+    line-height: 119%;
+}
+
+
+.back {
+	position: absolute;
+	z-index: 1;
+
+	img {
+		width: 125px;
+		height: 105px;
+		filter: blur(3px) invert(100%);
+		opacity: 0.2;
+		transform: translate(-254px, 26px);
+		// transform: translate(-55px, -120px);
+		animation: anim-back-plane 1s .3s forwards cubic-bezier(0, 0, 0, 1.02);
+	}
+}
+
+@keyframes anim-back-plane {
+	from {transform: translate(-254px, 26px);}
+	to {transform: translate(-55px, -120px)}
+}
+
+.front {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	position: absolute;
+	z-index: 2;
+
+	button {
+		width: 150px;
+		height: 40px;
+		background: white;
+		color: #1D1D1B;
+		font-weight: 800;
+		cursor: pointer;
+		margin-top: 20px;
+		margin-bottom: 60px;
+
+		&:hover {
+			background: rgb(226, 226, 226);
+		}
+	}
+
+
+	.wrap-img {
+		width: 100%;
+		position: relative;
+
+		img {
+			position: absolute;
+			filter: invert(100%);
+	
+			&:first-child {
+				width: 193px;
+				height: 160px;
+				transform: rotateY(180deg) translate(57px, -46px) rotate(4deg);
+			}
+	
+			&:last-child {
+				width: 265px;
+				transform: translate(74px, -18px) rotate(150deg) rotateX(180deg);
+			}
+			
+		}
+	}
+}
+
+// ::ng-deep.mdc-dialog__surface:has(app-thank-you) {
+// 	overflow: hidden;
+// }

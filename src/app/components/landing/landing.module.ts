@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/shared/materials/material.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
@@ -23,7 +24,8 @@ const declarations = [
     declarations,
     imports: [
         CommonModule, 
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MaterialModule
     ],
     exports: declarations
 })

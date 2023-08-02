@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { ICard } from 'src/shared/interfaces/ICard';
+import { ICard } from 'src/app/shared/interfaces/ICard';
+
 
 @Component({
     selector: 'app-card',

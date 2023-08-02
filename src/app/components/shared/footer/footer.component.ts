@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollToService } from 'src/shared/services/scroll-to.service';
+import { ScrollToService } from 'src/app/shared/services/scroll-to.service';
 
 @Component({
     selector: 'app-footer',
