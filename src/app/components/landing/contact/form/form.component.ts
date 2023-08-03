@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.component';
+import { UserService } from '../../../../shared/services/user.service';
 
 @Component({
     selector: 'app-form',
@@ -17,6 +18,7 @@ export class FormComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private dialog: MatDialog,
+        private userService: UserService
     ) {}
 
     public ngOnInit(): void {
@@ -54,12 +56,27 @@ export class FormComponent implements OnInit {
 
         this.isLoading = true;
 
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        this.isLoading = false;
+        const body = {
+            name: this.name.value,
+            email: this.email.value,
+            tel: this.tel.value,
+            message: this.message.value
+        };
 
-        this.openLoginModalWindow();
-        console.log('Form submitted', this.form.value);
-        
+        this.userService.sendLetter(body)
+            .subscribe({
+                next: (res) => {
+                    console.log(res);
+                    this.isLoading = false;
+                    this.openLoginModalWindow();
+                },
+                error: (err) => {
+                    console.log(err);
+                    this.isLoading = false;
+                }
+            });
+
+        // await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
     public get name (): AbstractControl {
