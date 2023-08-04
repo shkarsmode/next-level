@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.component';
 import { UserService } from '../../../../shared/services/user.service';
 
@@ -18,7 +19,8 @@ export class FormComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private dialog: MatDialog,
-        private userService: UserService
+        private userService: UserService,
+        private snackBar: MatSnackBar
     ) {}
 
     public ngOnInit(): void {
@@ -73,7 +75,12 @@ export class FormComponent implements OnInit {
                     this.openLoginModalWindow();
                 },
                 error: (err) => {
-                    console.log(err);
+                    if (err.status === 459) {
+                        this.snackBar.open(err.message, '❌', {
+                            horizontalPosition: 'center',
+                            verticalPosition: 'top'
+                        });
+                    }
                     this.isLoading = false;
                 }
             });
