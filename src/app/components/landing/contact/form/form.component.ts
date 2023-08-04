@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.component';
+import { ISubmitForm } from 'src/app/shared/interfaces/ISubmitForm';
 import { UserService } from '../../../../shared/services/user.service';
 
 @Component({
@@ -14,7 +15,10 @@ export class FormComponent implements OnInit {
 
     public form: FormGroup;
     public isLoading: boolean = false;
+    public isSubmitted: boolean = false;
+
     private dialogConfig: MatDialogConfig = new MatDialogConfig();
+    private formData: ISubmitForm;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -24,10 +28,17 @@ export class FormComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
+        this.getIsSubmittedAndFormData();
         this.initForm();
         this.initDialogConfig();
     }
 
+    private getIsSubmittedAndFormData(): void {
+        this.isSubmitted = !!localStorage.getItem('isFormSubmitted');
+        if (this.isSubmitted) {
+            this.formData = JSON.parse(localStorage.getItem('fromData')!);
+        }  
+    }
 
 	private initDialogConfig(): void {
         this.dialogConfig.autoFocus = false;
@@ -41,6 +52,21 @@ export class FormComponent implements OnInit {
     }
 
     private initForm(): void {
+        if (this.isSubmitted){
+            this.form = this.formBuilder.group({
+                name: [this.formData.name, Validators.required],
+                email: [this.formData.email, [Validators.required, Validators.email]],
+                tel: [this.formData.tel, [
+                    Validators.required, 
+                    Validators.pattern('^\\+?[0-9]+$'), 
+                    Validators.minLength(8)
+                ]],
+                location: [this.formData.location, Validators.required],
+                message: [this.formData.message, [Validators.required, Validators.minLength(10)]]
+            });
+            return;
+        }
+
         this.form = this.formBuilder.group({
             name: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
@@ -70,13 +96,17 @@ export class FormComponent implements OnInit {
         this.userService.sendLetter(body)
             .subscribe({
                 next: (res) => {
-                    console.log(res);
+                    localStorage.setItem('isFormSubmitted', 'true');
+                    localStorage.setItem('fromData',  JSON.stringify(body));
+                    this.isSubmitted = true;
                     this.isLoading = false;
+                    
                     this.openLoginModalWindow();
                 },
                 error: (err) => {
                     if (err.status === 459) {
                         this.snackBar.open(err.message, '❌', {
+                            duration: 3000,
                             horizontalPosition: 'center',
                             verticalPosition: 'top'
                         });
