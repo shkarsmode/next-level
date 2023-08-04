@@ -2,7 +2,7 @@
 	<div class="field">
 		<input 
 			type="text" 
-			placeholder="Your name"
+			placeholder="Name"
 			formControlName="name">
 		<div 
 			class="hint error"
@@ -17,7 +17,7 @@
 		<input 
 			type="text" 
 			name="email" 
-			placeholder="Your email"
+			placeholder="Email"
 			formControlName="email">
 		<div 
 			class="hint error"
@@ -35,7 +35,7 @@
 		<input 
 			type="tel"
 			name="tel"
-			placeholder="Your Phone"
+			placeholder="Phone"
 			formControlName="tel">
 		<div 
 			class="hint error"
@@ -50,9 +50,24 @@
 	</div>
 
 	<div class="field">
+		<input 
+			type="text"
+			name="location"
+			placeholder="Location"
+			formControlName="location">
+		<div 
+			class="hint error"
+			*ngIf="location.invalid && location.touched">
+			<div *ngIf="location.errors?.['required']">
+				Required area
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
 		<textarea
 			type="text" 
-			placeholder="Your message"
+			placeholder="Details"
 			formControlName="message">
 		</textarea>
 		<div 

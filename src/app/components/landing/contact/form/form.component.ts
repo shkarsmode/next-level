@@ -47,6 +47,7 @@ export class FormComponent implements OnInit {
                 Validators.pattern('^\\+?[0-9]+$'), 
                 Validators.minLength(8)
             ]],
+            location: ['', Validators.required],
             message: ['', [Validators.required, Validators.minLength(10)]]
         });
     }
@@ -60,6 +61,7 @@ export class FormComponent implements OnInit {
             name: this.name.value,
             email: this.email.value,
             tel: this.tel.value,
+            location: this.location.value,
             message: this.message.value
         };
 
@@ -93,5 +95,9 @@ export class FormComponent implements OnInit {
     
     public get message(): AbstractControl {
         return this.form.get('message')!;
+    }
+
+    public get location(): AbstractControl {
+        return this.form.get('location')!;
     }
 }
