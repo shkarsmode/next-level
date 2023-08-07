@@ -54,7 +54,7 @@ input, textarea {
 	}
 
 	&.ng-touched.ng-invalid {
-		border: 1px solid rgba(255, 0, 0, 0.664);
+		border: 1px solid rgba(255, 0, 0, 0.404);
 		&::placeholder {
 			color: rgba(185, 0, 0, 0.864)
 		}
@@ -87,7 +87,7 @@ textarea {
     position: absolute;
     right: 13px;
     top: -25px;
-    background-color: #1D1D1B;
+    background-color: #242526;
 	box-shadow: 0px 0px 6px 3px #e0e0e033;
 	// border: 1px solid rgba(29, 29, 27, 0.30);
 	// backdrop-filter: blur(3px);
@@ -97,7 +97,7 @@ textarea {
 		content: '';
 		position: absolute;
 		border: solid transparent;
-		border-top-color: #1D1D1B;
+		border-top-color: #242526;
 		border-width: 8px;
 		top: 18px;
 		right: 30px;
@@ -110,10 +110,10 @@ textarea {
 	}
 
 	&.error {
-		background-color: rgba(255, 0, 0, 0.8);
+		background-color: #242526;
 
 		&:after {
-			border-top-color: rgba(255, 0, 0, 0.8);
+			border-top-color: #242526;
 		}
 		
 		div {

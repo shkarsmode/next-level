@@ -8,7 +8,7 @@
 			class="hint error"
 			*ngIf="name.invalid && name.touched">
 			<div *ngIf="name.errors?.['required']">
-				Required area
+				Required
 			</div>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 			class="hint error"
 			*ngIf="email.invalid && email.touched">
 			<div *ngIf="email.errors?.['required']">
-				Required area
+				Required
 			</div>
 			<div *ngIf="email.errors?.['email']">
 				Incorrect email address
@@ -41,10 +41,10 @@
 			class="hint error"
 			*ngIf="tel.invalid && tel.touched">
 			<div *ngIf="tel.errors?.['required']">
-				Required area
+				Required
 			</div>
 			<div *ngIf="tel.errors?.['pattern'] || tel.errors?.['minlength']">
-				Incorrect phone number
+				Incorrect format
 			</div>
 		</div>
 	</div>
@@ -59,7 +59,7 @@
 			class="hint error"
 			*ngIf="location.invalid && location.touched">
 			<div *ngIf="location.errors?.['required']">
-				Required area
+				Required
 			</div>
 		</div>
 	</div>

@@ -62,7 +62,7 @@ export class FormComponent implements OnInit {
                     Validators.minLength(8)
                 ]],
                 location: [this.formData.location, Validators.required],
-                message: [this.formData.message, [Validators.required, Validators.minLength(10)]]
+                message: [this.formData.message, [Validators.minLength(10)]]
             });
             return;
         }
@@ -76,7 +76,7 @@ export class FormComponent implements OnInit {
                 Validators.minLength(8)
             ]],
             location: ['', Validators.required],
-            message: ['', [Validators.required, Validators.minLength(10)]]
+            message: ['', [Validators.minLength(10)]]
         });
     }
 
