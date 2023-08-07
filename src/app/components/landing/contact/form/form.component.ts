@@ -31,7 +31,7 @@ export class FormComponent implements OnInit, OnDestroy {
     public form: FormGroup;
     public isLoading: boolean = false;
     public isSubmitted: boolean = false;
-    public autocompleteLocations: IGeoLocation[];
+    public autocompleteLocations: IGeoLocation[] = [];
 
     private dialogConfig: MatDialogConfig = new MatDialogConfig();
     private formData: ISubmitForm;

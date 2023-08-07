@@ -56,7 +56,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     private determineHansetForHeaders(deviceType: CustomBreakpointsEnum): void {
         this.isMobile = deviceType === CustomBreakpointsEnum.Handset ? true : false;
-        console.log('type', deviceType);
     }
 
     public ngOnDestroy(): void {
