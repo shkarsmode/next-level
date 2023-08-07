@@ -268,3 +268,24 @@ h2 {
 		}
 	}
 }
+
+.wrap-select {
+	display: flex;
+	align-items: center;
+
+	.icon {
+		margin-right: 5px;
+	}
+
+	.address-line-1 {
+		margin-right: 5px;
+	}
+	.address-line-2 {
+		font-size: 12px;
+		opacity: 0.5;
+	}
+}
+
+.icon span {
+	color: #444444;
+}

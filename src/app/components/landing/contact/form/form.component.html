@@ -54,12 +54,35 @@
 			type="text"
 			name="location"
 			placeholder="Location"
-			formControlName="location">
+			formControlName="location"
+			(keyup)="onChangeLocation($event)"
+			[matAutocomplete]="auto">
+		<mat-autocomplete #auto="matAutocomplete">
+			<mat-option *ngFor="let city of autocompleteLocations" [value]="city.formatted">
+				<div class="wrap-select">
+					<div class="icon">
+						<span class="material-symbols-outlined">
+							location_city
+						</span>
+					</div>
+					<div 
+						class="address-line-1" 
+						[innerHTML]="city.address_line1 | autocompleteHighlight: location.value">
+					</div>
+					<div class="address-line-2">
+						{{ city.address_line2 }}
+					</div>
+				</div>
+			</mat-option>
+		</mat-autocomplete>
 		<div 
 			class="hint error"
 			*ngIf="location.invalid && location.touched">
 			<div *ngIf="location.errors?.['required']">
 				Required
+			</div>
+			<div *ngIf="location.errors?.['invalidLocation']">
+				Invalid location
 			</div>
 		</div>
 	</div>

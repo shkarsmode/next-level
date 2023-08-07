@@ -95,3 +95,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button.mat-mdc-snack-bar-action.mdc-button.mat-mdc-button {
 	width: auto !important;
 }
+
+strong {
+	font-weight: 500;
+}
+
+.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after, 
+.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+    color: #444444;
+}
