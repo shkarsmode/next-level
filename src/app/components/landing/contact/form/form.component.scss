@@ -4,9 +4,11 @@ form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 100px 0;
+	padding: 100px 85px;
 	background-color: white;
-	width: 848px;
+	width: 100%;
+	max-width: 630px;
+	background-color: #F9F9F9;
 	transition: background-color .3s;
 	position: relative;
 }
@@ -275,6 +277,7 @@ h2 {
 
 	.icon {
 		margin-right: 5px;
+		display: flex;
 	}
 
 	.address-line-1 {

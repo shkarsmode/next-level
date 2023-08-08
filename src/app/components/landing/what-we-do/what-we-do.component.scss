@@ -1,5 +1,6 @@
 .wrap-container {
 	padding: 200px 0;
+	background-color: #fff;
 }
 
 .container {
@@ -21,8 +22,8 @@ h2 {
 
 .wrap-cards {
 	display: flex;
-	justify-content: space-between;
-	column-gap: 24px;
+	flex-direction: column;
+	row-gap: 50px;
 }
 
 @media (max-width: 1300px) {

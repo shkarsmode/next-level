@@ -1,8 +1,8 @@
 .card {
 	user-select: none;
 
-	width: 412px;
-	height: 320px;
+	width: 600px;
+	height: 280px;
 
 	border: 1px solid rgba(29, 29, 27, 0.10);
 	background: #FFF;
@@ -11,7 +11,7 @@
 	perspective: 500px;
 	transition: all .2s ease;
 
-	box-shadow: 3px 3px 3px 2px rgb(238 238 238 / 34%);
+	// box-shadow: 3px 3px 3px 2px rgb(238 238 238 / 34%);
 
 	.wrap:hover & {
 		transform: translateY(-10px);
