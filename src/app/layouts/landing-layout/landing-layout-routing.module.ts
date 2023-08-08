@@ -7,13 +7,18 @@ import { LandingLayoutComponent } from './landing-layout.component';
 
 const routes: Routes = [
 	{ 
-		path: '', component: LandingLayoutComponent, children: [
+		path: '', 
+		component: LandingLayoutComponent,
+		children: [
+			{
+				path: '', redirectTo: '', pathMatch: 'full' 
+			},
 			{ path: '', component: MainLayoutComponent },
 			{ path: 'about-us', component: AboutUsLayoutComponent },
 			{ path: 'founders-story', component: FounderLayoutComponent },
-			{ path: '**', redirectTo: '/'}
 		]
-	}
+	},
+	// { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

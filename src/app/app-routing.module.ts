@@ -10,7 +10,9 @@ const routes: Routes = [
 		path: 'privacy-center', 
 		loadChildren: () => import('./layouts/policy-center-layout/policy-center-layout.module').then(m => m.PolicyCenterLayoutModule)
 	},
-	{ path: '**', redirectTo: ''}
+	{
+		path: '**', pathMatch: 'full', redirectTo: ''
+	}
 ];
 
 @NgModule({
