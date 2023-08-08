@@ -44,8 +44,24 @@ html {
 		width: 100%;
 		overflow-y: scroll;
 	}
-}
 
+	&:has(app-preloader .wrap:not(.closing)) {
+		position: fixed;
+		width: 100%;
+		overflow-y: scroll;
+
+		body {
+			&::-webkit-scrollbar-track {
+				width: 0px;
+				background: #1D1D1B;
+			}		
+		}
+	}
+
+	& app-preloader:has(.closing) {
+		pointer-events: none;
+	}
+}
 
 h1 {
 	font-size: 80px;
@@ -70,8 +86,6 @@ h4 {
 	font-size: 24px;
 	font-weight: 500;
 }
-
-
 
 p {
 	font-weight: 400;
