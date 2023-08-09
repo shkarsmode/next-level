@@ -1,0 +1,156 @@
+.wrap-container {
+	padding: 200px 0px;
+	height: 100%;
+	position: relative;
+	background-color: #484847;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('/assets/img/founder.webp');
+		background-position: left;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(270deg, #484847 57.24%, rgba(72, 72, 71, 0.44) 100%);
+		z-index: 1;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 50px;
+	max-width: 1100px;
+	line-height: normal;
+	color: white;
+
+	&:nth-child(3) {
+		margin-top: 200px;
+	}
+}
+
+.description {
+	font-size: 24px;
+	opacity: 0.8;
+	text-align: center;
+	max-width: 898px;
+	line-height: 150%;
+	color: white;
+}
+
+button {
+	margin-top: 60px;
+	background-color: transparent;
+	border: 1px solid white;
+
+	font-size: 20px;
+	font-weight: 500;
+
+	color: white;
+	cursor: pointer;
+
+	width: 320px;
+	height: 70px;
+}
+
+@media (max-width: 1470px) {
+	.wrap-container::after {
+		background: linear-gradient(270deg, #484847 40.24%, rgba(72, 72, 71, 0.44) 100%);
+	}
+}
+
+@media (max-width: 1000px) {
+	h1 {
+		font-size: 70px !important;
+		max-width: 100%;
+	}
+
+	.description {
+		font-size: 20px;
+		max-width: 100%;
+	}
+
+	.wrap-container::after {
+		background: linear-gradient(270deg, #484847 30.24%, rgba(72, 72, 71, 0.44) 100%);
+	}
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 60px !important;
+	}
+
+	.wrap-container::after {
+		background: linear-gradient(270deg, #484847 15.24%, rgba(72, 72, 71, 0.44) 100%);
+	}
+
+	.description {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: 50px !important;
+	}
+
+	.wrap-container {
+
+		&::after {
+			background: linear-gradient(270deg, #484847 0%, rgba(72, 72, 71, 0.44) 100%);
+		}
+
+		&::before {
+			background-position: -92px;
+		}
+	}
+
+	.description {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 500px) {
+	.wrap-container {
+		padding: 100px 0;
+
+		&::before {
+			background-position: -210px;
+		}
+	}
+
+	h1:nth-child(3) {
+		margin-top: 100px;
+	}
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 40px !important;
+		line-height: 50px;
+	}
+
+	.description {
+		font-size: 14px;
+	}
+}

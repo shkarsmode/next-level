@@ -10,10 +10,14 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormComponent } from './contact/form/form.component';
 import { DarkGreyInfoComponent } from './dark-grey-info/dark-grey-info.component';
+import { FounderBlockComponent } from './founder-block/founder-block.component';
 import { FounderStoryComponent } from './founder-story/founder-story.component';
+import { GreyBlockComponent } from './grey-block/grey-block.component';
 import { GreyInfoComponent } from './grey-info/grey-info.component';
+import { QuoteComponent } from './quote/quote.component';
 import { CardComponent } from './what-we-do/card/card.component';
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
+import { WhiteBlockComponent } from './white-block/white-block.component';
 
 const declarations = [
     BannerComponent,
@@ -25,7 +29,11 @@ const declarations = [
     FormComponent,
     GreyInfoComponent,
     DarkGreyInfoComponent,
-    AboutUsPreviewComponent
+    AboutUsPreviewComponent,
+    GreyBlockComponent,
+    QuoteComponent,
+    WhiteBlockComponent,
+    FounderBlockComponent
 ];
 
 @NgModule({
