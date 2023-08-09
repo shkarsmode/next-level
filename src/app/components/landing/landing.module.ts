@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/materials/material.module';
 import { AutocompleteHighlightPipe } from 'src/app/shared/pipes/autocomplete-highlight.pipe';
+import { AboutUsPreviewComponent } from './about-us-preview/about-us-preview.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
@@ -22,7 +24,8 @@ const declarations = [
     ContactComponent,
     FormComponent,
     GreyInfoComponent,
-    DarkGreyInfoComponent
+    DarkGreyInfoComponent,
+    AboutUsPreviewComponent
 ];
 
 @NgModule({
@@ -33,7 +36,8 @@ const declarations = [
     imports: [
         CommonModule, 
         ReactiveFormsModule,
-        MaterialModule
+        MaterialModule,
+        RouterModule
     ],
     exports: declarations
 })

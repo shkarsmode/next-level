@@ -142,17 +142,14 @@ button {
 @media (max-width: 1000px) {
 	form {
 		padding: 75px;
-		background-color: white;
 		width: 100%;
 	}
 }
 
 @media (max-width: 600px) {
 	form {
-		width: 100%;
-
-		padding: 0px 15px;
-		background-color: transparent;
+		width: 100vw;
+		padding: 80px 15px;
 		input, textarea {
 			width: 100%;
 		}

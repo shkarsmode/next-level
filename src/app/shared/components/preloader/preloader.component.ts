@@ -10,6 +10,12 @@ export class PreloaderComponent {
     @Input() isLoading: boolean = true;
 
     public ngOnInit(): void {
+        const isNotShowPreloader = !!localStorage.getItem('isNotShowPreloader');
+        if (isNotShowPreloader) {
+            this.isLoading = false;
+            return;
+        }
+
         setTimeout(() => {
             this.isLoading = false;
         }, 2000);
