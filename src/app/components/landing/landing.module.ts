@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormComponent } from './contact/form/form.component';
+import { DarkBlockComponent } from './dark-block/dark-block.component';
 import { DarkGreyInfoComponent } from './dark-grey-info/dark-grey-info.component';
 import { FounderBlockComponent } from './founder-block/founder-block.component';
 import { FounderStoryComponent } from './founder-story/founder-story.component';
@@ -33,13 +34,14 @@ const declarations = [
     GreyBlockComponent,
     QuoteComponent,
     WhiteBlockComponent,
-    FounderBlockComponent
+    FounderBlockComponent,
+    DarkBlockComponent
 ];
 
 @NgModule({
     declarations: [
         ...declarations,
-        AutocompleteHighlightPipe
+        AutocompleteHighlightPipe,
     ],
     imports: [
         CommonModule, 
