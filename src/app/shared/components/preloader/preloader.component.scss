@@ -105,13 +105,13 @@ $box-shadow: 5px 5px 3px 0px rgba(20, 20, 20, 0.048);
 		height: 5px;
 		max-width: 40px;
 		background-color: black;
-		animation: anim-lines 4s .8s forwards infinite;
+		animation: anim-lines 4s 1.8s forwards infinite;
 		box-shadow: $box-shadow
 	}
 
 	.line2 {
 		transform: translate(29px, 48px);
-		animation: anim-lines 4s .5s forwards infinite;
+		animation: anim-lines 4s 1s forwards infinite;
 	}
 
 	.line3 {

@@ -18,6 +18,6 @@ export class PreloaderComponent {
 
         setTimeout(() => {
             this.isLoading = false;
-        }, 2000);
+        }, 2700);
     }
 }
