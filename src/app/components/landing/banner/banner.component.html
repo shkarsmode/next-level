@@ -5,11 +5,13 @@
 			<div class="description" *ngIf="info?.description">
 				{{ info.description }}
 			</div>
-			<button class="hover-border" (click)="scrollTo('contact')">
+			<button 
+				class="hover-border" 
+				(click)="scrollTo('contact')">
 				<span>Book an appointment</span>
 			</button>
 		</div>
-		<div class="right">
+		<div class="right" data-aos="fade">
 			<img [src]="'assets/img/' + info.img" alt="banner">
 		</div>
 	</div>
