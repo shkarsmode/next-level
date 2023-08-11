@@ -1,11 +1,21 @@
 <div class="wrap-container" [ngClass]="{'with-description-flow': info?.description}">
 	<div class="container">
 		<div class="left">
-			<h1>{{ info.title }}</h1>
-			<div class="description" *ngIf="info?.description">
+			<h1 
+				data-aos="fade-up"
+				data-aos-duration="5000">
+				{{ info.title }}
+			</h1>
+			<div 
+				data-aos="fade-up"
+				data-aos-delay="500"
+				class="description" 
+				*ngIf="info?.description">
 				{{ info.description }}
 			</div>
-			<button 
+			<button
+				data-aos-delay="700"
+				data-aos="fade-up" 
 				class="hover-border" 
 				(click)="scrollTo('contact')">
 				<span>Book an appointment</span>
