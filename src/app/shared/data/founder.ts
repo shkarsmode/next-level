@@ -2,7 +2,7 @@ export const founderInfo = {
 	banner: {
 		title: 'Founder’s Story',
 		description: 'Dr Csiki has been focused on cancer research and care of patients for over 20+ years. Her interests in helping people started at an early age, growing up on a farm in Eastern Europe with her grandparents.',
-		img: 'founder.webp'
+		img: 'founder-banner.webp'
 	},
 	dark: {
 		title: 'The combination of personal experiences and professional experiences of working with cancer patients for over 20 years',

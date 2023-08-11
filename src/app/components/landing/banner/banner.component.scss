@@ -2,8 +2,20 @@ $button-color: #1D1D1B;
 
 .wrap-container {
 	background-color: white;
-	height: 100%;
-	padding-top: 100px;
+	min-height: 100%;
+	padding-top: 160px;
+	padding-bottom: 100px;
+}
+
+.with-description-flow {
+	img {
+		width: 654px;
+		height: auto;
+	}
+
+	h1, .description {
+		margin-bottom: 50px;
+	}
 }
 
 .container {
@@ -29,6 +41,11 @@ h1 {
 	line-height: normal;
 	margin-bottom: 50px;
 	// text-align: center;
+}
+
+.description {
+	font-size: 24px;
+	line-height: 150%;
 }
 
 button {
@@ -129,6 +146,16 @@ button.hover-border:hover::after {
 		height: 400px;
 	}
 
+	.with-description-flow {
+		img {
+			width: 400px;
+		}
+
+		.description {
+			text-align: center;
+		}
+	}
+
 	.right {
 		margin-bottom: 30px;
 	}
@@ -140,27 +167,36 @@ button.hover-border:hover::after {
 	}
 }
 
-@media (max-width: 980px) {
-}
-
 @media (max-width: 599px) {
 	img {
 		width: 100%;
 		height: auto;
 	}
+
+	.with-description-flow {
+		img {
+			width: 100%;
+		}
+
+		.description {
+			font-size: 20px;
+		}
+	}
 }
 
 @media (max-width: 455px) {
 	.wrap-container {
-		padding-top: 25px;
+		padding-top: 120px;
+	}
+
+	.with-description-flow {
+		.description {
+			font-size: 18px;
+		}
 	}
 }
 
 @media (max-width: 400px) {
-	.wrap-container {
-		padding-top: 0px;
-	}
-
 	button {
 		width: 100%;
 	}
