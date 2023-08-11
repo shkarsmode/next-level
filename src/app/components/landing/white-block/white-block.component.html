@@ -1,8 +1,8 @@
 <div class="wrap-container" [ngClass]="{'with-img': info?.img}">
 	<div class="container">
 		<div class="block">
-			<h1>{{ info.title }}</h1>
-			<div class="wrap-info">
+			<h1 data-aos="fade-up">{{ info.title }}</h1>
+			<div class="wrap-info" data-aos="fade-up">
 				<img *ngIf="info?.img" [src]="'assets/img/' + info?.img" alt="Personal">
 				<div class="description" [innerHTML]="info.description">
 				</div>

@@ -9,9 +9,10 @@
 	.sticky {
 		position: fixed !important;
 		box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(10px);
+		// backdrop-filter: blur(10px);
+		// background: #ffffffb0 !important;
+		background-color: white;
 		animation: slideDown 0.35s ease-out;
-		background: #ffffffb0 !important;
 		border-bottom: 1px solid transparent;
 	}
 }
