@@ -16,7 +16,7 @@ export class WhatWeDoComponent {
 
 const cards: ICard[] = [
     {
-        image: 'stethoscope',
+        image: 'heart',
         header: 'Concierge Oncology',
         description: 'The highest level of personalized care and attention to detail throughout your cancer journey'
     },
@@ -26,7 +26,7 @@ const cards: ICard[] = [
         description: 'Cutting-edge diagnostics and preventative care focused on breakthrough science for best prevention and overall health'
     },
     {
-        image: 'heart',
+        image: 'support',
         header: 'Integrative Family Care',
         description: 'An integrated approach from prevention to care focused on the changing needs with time of each family member'
     },

@@ -12,6 +12,6 @@ export class AppComponent implements AfterViewInit {
         this.initAOSModule();
     }
 
-    private initAOSModule = () => AOS.init({ once: true, duration: 500 });
+    private initAOSModule = () => AOS.init({ once: false, duration: 500 });
 
 }

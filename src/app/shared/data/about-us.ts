@@ -10,8 +10,8 @@ export const aboutUsInfo = {
 			description: 'Our mission at Next Level Oncology is to deliver you and your family unmatched dedication, time and expertise.'
 		},
 		white: {
-			title: 'Changes in Medicine',
-			description: 'Medicine changed drastically over the last decade, as physicians struggle to manage immense rosters of patients while unfortunately the number of patients with cancer is on the continued rise, and where the increasingly complex demands of medical bureaucracy are overwhelming the ability of large practices and hospitals to build meaningful relationships with the people in their care. It is both alarming and upsetting that patients grow accustomed to not knowing their doctors, even as they feel more daunted by the medical system they’re required to navigate in times of need when urgency and attention to the patient matter most.'
+			title: 'Changes in the Way Care is Delivered',
+			description: 'Medicine changed drastically over the last decade. Physicians struggle to manage immense rosters of patients while unfortunately the number of patients with cancer is on the continued rise, while the increasingly complex demands of medical bureaucracy are overwhelming the ability of large practices and hospitals to build meaningful relationships with the people in their care. It is both alarming and upsetting that patients grow accustomed to not knowing their doctors, even as they feel more daunted by the medical system they’re required to navigate in times of need when urgency and attention to the patient matter most.'
 		}
 	},
 	grey: [

@@ -1,6 +1,7 @@
 .wrap-container {
 	padding: 200px 0px;
-	height: 100%;
+	min-height: 103%;
+	height: auto;
 
 	&.black-mode {
 		background-color: #484847;

@@ -6,7 +6,7 @@ export const homeInfo = {
 	darkWhite: {
 		dark: {
 			title: 'Highest Level of Personalized Care',
-			description: 'Our care team members strive to provide the highest level of personalized care fit for each person`s need. <br>We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge treatments and thus being able to access them and provide the best care.'
+			description: 'Our care team members strive to provide the highest level of personalized care fit for each person`s need. <br><br> We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge treatments and thus being able to access them and provide the best care.'
 		},
 		white: {
 			title: 'Complete Privacy and Discretion',
