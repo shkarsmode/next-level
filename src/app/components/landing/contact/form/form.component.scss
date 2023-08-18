@@ -280,7 +280,7 @@ h2 {
 	.address-line-1 {
 		margin-right: 5px;
 		line-height: 18px;
-		text-wrap: nowrap;
+		white-space: nowrap;
 	}
 
 	.address-line-2 {
@@ -288,7 +288,7 @@ h2 {
 		font-size: 12px;
 		opacity: 0.5;
 		max-width: 190px;
-		text-wrap: nowrap;
+		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
