@@ -42,6 +42,27 @@ export const homeInfo = {
 			title: 'Patient-first approach',
 			description: 'Our mission is to change the shortcomings of current oncology practices completely. At Next Level Oncology, we’re dedicated to providing better and happier lives by building deeper, more lasting connections to our patients. We combine our patient-first values with the best of personalized diagnostics, preventative care and treatments both supportive and therapeutic to treat the person as a whole, and to help our patients achieve their fullest and best lives possible. To make that possible, we’ve committed ourselves to getting to know you, because we believe that you deserve more than the highest quality of care. We believe that you deserve exceptional care on your own terms, based on your needs, just as you are. That’s our promise and we hold ourselves to it.'
 		}
-	]
+	],
+	cardsSection: {
+		title: 'What we do',
+		cards: [
+			{
+				image: 'heart',
+				header: 'Concierge Oncology',
+				description: 'The highest level of personalized care and attention to detail throughout your cancer journey'
+			},
+			{
+				image: 'wellness',
+				header: 'Prevention and Wellness',
+				description: 'Cutting-edge diagnostics and preventative care focused on breakthrough science for best prevention and overall health'
+			},
+			{
+				image: 'support',
+				header: 'Integrative Family Care',
+				description: 'An integrated approach from prevention to care focused on the changing needs with time of each family member'
+			},
+		]
+	}
+	
 	
 }

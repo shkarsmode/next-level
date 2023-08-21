@@ -5,7 +5,10 @@
 <app-grey-block [info]="info.grey[0]"></app-grey-block>
 <app-dark-info [info]="info.dark[0]"></app-dark-info>
 
-<app-what-we-do></app-what-we-do>
+<app-what-we-do 
+	[cards]="info.cardsSection.cards" 
+	[title]="info.cardsSection.title">
+</app-what-we-do>
 
 
 <!-- <app-dark-grey-info [info]="info.darkWhite"></app-dark-grey-info> -->

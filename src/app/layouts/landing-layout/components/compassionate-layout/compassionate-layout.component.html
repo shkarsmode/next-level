@@ -1,14 +1,12 @@
 <app-banner [info]="info.banner"></app-banner>
 
 <app-grey-block [info]="info.grey[0]"></app-grey-block>
-<app-white-block [info]="info.white[0]"></app-white-block>
 
-<!-- <app-dark-grey-info [info]="info.darkWhite"></app-dark-grey-info> -->
+<app-what-we-do 
+	[cards]="info.cardsSection.cards" 
+	[title]="info.cardsSection.title">
+</app-what-we-do>
 
-<app-grey-block [info]="info.grey[1]"></app-grey-block>
-
-<app-white-block [info]="info.white[1]"></app-white-block>
-
-<app-founder-block></app-founder-block>
+<app-dark-info [info]="info.dark[0]"></app-dark-info>
 
 <app-contact></app-contact>

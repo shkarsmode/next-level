@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICard } from 'src/app/shared/interfaces/ICard';
 
 
@@ -9,25 +9,7 @@ import { ICard } from 'src/app/shared/interfaces/ICard';
 })
 export class WhatWeDoComponent {
 
-    public cards: ICard[] = cards;
+    @Input() public cards: ICard[];
+    @Input() public title: string;
     
 }
-
-
-const cards: ICard[] = [
-    {
-        image: 'heart',
-        header: 'Concierge Oncology',
-        description: 'The highest level of personalized care and attention to detail throughout your cancer journey'
-    },
-    {
-        image: 'wellness',
-        header: 'Prevention and Wellness',
-        description: 'Cutting-edge diagnostics and preventative care focused on breakthrough science for best prevention and overall health'
-    },
-    {
-        image: 'support',
-        header: 'Integrative Family Care',
-        description: 'An integrated approach from prevention to care focused on the changing needs with time of each family member'
-    },
-];

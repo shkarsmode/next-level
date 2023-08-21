@@ -3,6 +3,7 @@
 		<div class="block">
 			<h4 data-aos="fade-up" >{{ info.title }}</h4>
 			<div
+				*ngIf="info?.description"
 				data-aos-delay="500"
 				data-aos="fade-up"
 				class="description" 

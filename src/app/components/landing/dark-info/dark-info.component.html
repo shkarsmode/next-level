@@ -5,9 +5,10 @@
 			{{ info.title }}
 		</h1>
 		<div 
+			*ngIf="info?.description"
 			class="description"
 			data-aos="fade-up"
-			[innerHTML]="info.description">
+			[innerHTML]="info?.description">
 		</div>
 		<button
 			*ngIf="info?.buttonLink"
