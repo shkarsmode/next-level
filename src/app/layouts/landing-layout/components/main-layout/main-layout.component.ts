@@ -8,5 +8,5 @@ import { homeInfo } from 'src/app/shared/data/home';
 })
 export class MainLayoutComponent {
 
-    public homeInfo: any = homeInfo;
+    public info: any = homeInfo;
 }

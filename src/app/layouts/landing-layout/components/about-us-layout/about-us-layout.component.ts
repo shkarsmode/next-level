@@ -7,5 +7,5 @@ import { aboutUsInfo } from 'src/app/shared/data/about-us';
     styleUrls: ['./about-us-layout.component.scss']
 })
 export class AboutUsLayoutComponent {
-    public aboutUsInfo: any = aboutUsInfo;
+    public info: any = aboutUsInfo;
 }
