@@ -1,4 +1,8 @@
 .wrap-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	padding: 200px 0;
 	background-color: white;
 }
@@ -21,6 +25,13 @@ p {
 	line-height: 150%;
 }
 
+.disclaimer {
+	max-width: 100%;
+	font-size: 16px;
+	opacity: 0.6;
+	margin-top: 60px;
+}
+
 .email {
 	a {
 		text-decoration: none;
@@ -39,7 +50,7 @@ p {
 		row-gap: 50px;
 	}
 
-	p {
+	p:not(.disclaimer) {
 		text-align: center;
 	}
 
@@ -56,5 +67,10 @@ p {
 @media (max-width: 500px) {
 	.wrap-container {
 		padding: 100px 0;
+	}
+
+	p.disclaimer {
+		font-size: 14px;
+		margin-top: 30px;
 	}
 }

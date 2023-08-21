@@ -1,0 +1,20 @@
+<div class="wrap-container">
+	<div class="container">
+		<h1 
+			data-aos="fade-up">
+			{{ info.title }}
+		</h1>
+		<div 
+			class="description"
+			data-aos="fade-up"
+			[innerHTML]="info.description">
+		</div>
+		<button
+			*ngIf="info?.buttonLink"
+			class="hover-border"
+			data-aos="fade-up"
+			[routerLink]="info?.buttonLink">
+			<span>Learn More</span>
+		</button>
+	</div>
+</div>

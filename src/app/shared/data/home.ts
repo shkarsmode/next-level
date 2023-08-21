@@ -3,17 +3,22 @@ export const homeInfo = {
 		title: 'Cancer is Personal',
 		img: 'banner.webp'
 	},
-	darkWhite: {
-		dark: {
-			title: 'Highest Level of Personalized Care',
-			description: 'Our care team members strive to provide the highest level of personalized care fit for each person`s need. <br><br> We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge treatments and thus being able to access them and provide the best care.'
+	dark: [
+		{
+			title: 'Combining Compassion and Expertise for Unparalleled Cancer Care',
+			description: 'Caring about you and listening to your needs is at the heart of the practice. Our services are designed to fit your changing needs from conventional treatments to cutting edge compassionate use therapies. We aim to bridge the gap between what is available and what is possible.',
+			buttonLink: '/compassionate-use'
 		},
-		white: {
-			title: 'Complete Privacy and Discretion',
-			description: 'Maintaining confidentiality and providing all services with maximal discretion is at the core of the practice and one of its essential values'
+		{
+			title: 'Highest Level of Personalized Care',
+			description: 'Our care team members strive to provide the highest level of personalized care fit for each person\'s need. <br><br> We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge treatments and thus being able to access them and provide the best care.'
 		}
-	},
+	],
 	grey: [
+		{
+			title: 'Personalized Approach and Attention to Every Detail',
+			description: 'Better cancer care and improved wellness outcomes because of deep relationships and ongoing conversations throughout the shared cancer care journey with your concierge physician.',
+		},
 		{
 			title: 'Care that is Highly Personal and Exceptional',
 			description: 'Next Level Oncology is based on the premise that delivering exceptional medical care must fundamentally revolve around, honor and protect the most scared of relationship - the one between a physician and a patient.'
@@ -25,8 +30,9 @@ export const homeInfo = {
 	],
 	white: [
 		{
-			title: 'Сlose relationships',
-			description: 'We envision the Next Level Oncology concierge practice as a community of real people and real families with stories, dreams and wishes that deserve to be heard, and with complex and demanding lives and illnesses like cancer that deserve the utmost attention to detail and respect. <br><br> When  our patients call, we answer, and when they feel sick or worried or simply have questions we make time for them. We may travel to their homes when needed and can be with them through the hardest and most difficult times or simply just to listen in the comfort of one’s home surrounded by their loved ones. The cancer journey is unique and complicated but there are still many opportunities for celebration. Your concierge doctor will be with you as much in celebration as in illness. It is a powerful form of practice, rooted in the community relationships of the Old World and dedicated to a deeply personal vision of cancer care and healthcare in general—one that is too often lost in the medical landscape of today.'
+			title: 'Complete Privacy and Discretion',
+			description: 'Maintaining confidentiality and providing all services with maximal discretion is at the core of the practice and  one of its essential values',
+			isCentered: true 
 		},
 		{
 			title: 'Changes in Medicine',

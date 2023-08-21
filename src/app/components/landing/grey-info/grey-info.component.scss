@@ -1,5 +1,6 @@
 @import '/src/styles/mixin.scss';
 @include common-styles;
+@include button;
 
 .wrap-container {
 	padding: 200px 0px;

@@ -7,14 +7,21 @@
 	height: auto;
 }
 
+.centered {
+	h1, .description {
+		text-align: center;
+	}
+}
+
 .description {
-	max-width: 1000px;
+	// max-width: 1000px;
 	text-align: left;
 }
 
 h1 {
 	text-align: left;
 	width: 100%;
+	max-width: 850px;
 }
 
 .with-img {
