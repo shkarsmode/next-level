@@ -10,7 +10,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormComponent } from './contact/form/form.component';
 import { DarkBlockComponent } from './dark-block/dark-block.component';
-import { DarkGreyInfoComponent } from './dark-grey-info/dark-grey-info.component';
+import { DarkInfoComponent } from './dark-info/dark-info.component';
 import { FounderBlockComponent } from './founder-block/founder-block.component';
 import { FounderStoryComponent } from './founder-story/founder-story.component';
 import { GreyBlockComponent } from './grey-block/grey-block.component';
@@ -29,7 +29,7 @@ const declarations = [
     ContactComponent,
     FormComponent,
     GreyInfoComponent,
-    DarkGreyInfoComponent,
+    DarkInfoComponent,
     AboutUsPreviewComponent,
     GreyBlockComponent,
     QuoteComponent,
