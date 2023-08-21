@@ -68,19 +68,31 @@ ul {
 	
 }
 
+@media (max-width: 1280px) {
+	ul {
+		column-gap: 25px;
+		li {
+			font-size: 16px;
+		}
+	}
+}
+
 @media (max-width: 910px) {
 	img {
 		width: 260px;
 	}
 	
 	ul {
-		column-gap: 40px;
+		column-gap: 15px;
+		li {
+			font-size: 14px;
+		}
 	}
 }
 
 @media (max-width: 725px) {
 	img {
-		width: 220px;
+		width: 180px;
 	}
 	
 	ul {

@@ -1,6 +1,5 @@
 export interface ICustomBreakpoints {
 	readonly Handset: string;
-	readonly Tablet: string;
 	readonly Web: string;
 	readonly Small: string;
 	readonly Medium: string;
@@ -9,8 +8,7 @@ export interface ICustomBreakpoints {
 }
 
 export enum CustomBreakpointsEnum {
-	Handset = '(max-width: 599px)',
-    Tablet = '(min-width: 600px) and (max-width: 959px)',
+	Handset = '(max-width: 725px)',
     Web = '(min-width: 960px)',
     Small = '(min-width: 961px) and (max-width: 959px)',
     Medium = '(min-width: 961px) and (max-width: 1279px)',
@@ -19,4 +17,4 @@ export enum CustomBreakpointsEnum {
 }
 
 export type CustomBreakpoints = 
-	"Handset" | "Tablet" | "Web" | "Small" | "Medium" | "Large" | "XLarge";
+	"Handset" | "Web" | "Small" | "Medium" | "Large" | "XLarge";
