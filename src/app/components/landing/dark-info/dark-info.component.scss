@@ -1,0 +1,24 @@
+@import '/src/styles/mixin.scss';
+@include common-styles;
+@include button;
+
+.wrap-container {
+	background-color: #484847;
+}
+
+.container {
+	justify-content: center;
+}
+
+h1, .description{
+	color: white;
+}
+
+button {
+	margin-top: 40px;
+	border: 1px solid white;
+	
+	span {
+		color: white;
+	}
+}
