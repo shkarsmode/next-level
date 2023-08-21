@@ -16,16 +16,18 @@
 			<li 
 				routerLink="/about-us"
 				style="--i:0s"
-				(click)="onClickLi('about')">
+				(click)="toggleMenu()">
 				About us
 			</li>
 			<li
 				routerLink="/compassionate-use"
+				(click)="toggleMenu()"
 				style="--i:0.15s">
 				Compassionate Use
 			</li>
 			<li 
 				routerLink="/founders-story"
+				(click)="toggleMenu()"
 				style="--i:0.3s">
 				Founder's Story
 			</li>
