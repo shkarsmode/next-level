@@ -1,5 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import AOS from 'aos';
+import AOS, { AosOptions } from 'aos';
 
 @Component({
     selector: 'app-root',
@@ -8,10 +8,17 @@ import AOS from 'aos';
 })
 export class AppComponent implements AfterViewInit {
     
+    private AOSConfig: AosOptions = { 
+        once: false, 
+        duration: 500, 
+        anchorPlacement: 'top-top',
+        offset: 50
+    };
+
     public ngAfterViewInit(): void {
         this.initAOSModule();
     }
 
-    private initAOSModule = () => AOS.init({ once: false, duration: 500 });
+    private initAOSModule = () => AOS.init(this.AOSConfig);
 
 }

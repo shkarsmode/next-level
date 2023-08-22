@@ -4,19 +4,15 @@
 	<div class="container">
 		<div class="left" lang="en">
 			<h1 
-				data-aos="fade-up">
+				data-aos="fade">
 				{{ info.title }}
 			</h1>
 			<div 
-				data-aos="fade-up"
-				data-aos-delay="500"
 				class="description" 
 				*ngIf="info?.description">
 				{{ info.description }}
 			</div>
 			<button
-				data-aos-delay="700"
-				data-aos="fade-up" 
 				class="hover-border" 
 				(click)="scrollTo('contact')">
 				<span>Book an appointment</span>
