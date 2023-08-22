@@ -43,6 +43,7 @@ $box-shadow: 5px 5px 3px 0px rgba(20, 20, 20, 0.048);
 	transform: translateY(-40px);
 	transition: all .6s;
 	background-color: white;
+	animation: anim-bg-color 1s 1.6s forwards;
 
 	width: 96px;
 	height: 96px;
@@ -105,18 +106,18 @@ $box-shadow: 5px 5px 3px 0px rgba(20, 20, 20, 0.048);
 		height: 5px;
 		max-width: 40px;
 		background-color: black;
-		animation: anim-lines 4s 1.8s forwards infinite;
+		animation: anim-lines 2.5s 1.2s forwards;
 		box-shadow: $box-shadow
 	}
 
 	.line2 {
 		transform: translate(29px, 48px);
-		animation: anim-lines 4s 1s forwards infinite;
+		animation: anim-lines 2.5s .7s forwards;
 	}
 
 	.line3 {
 		transform: translate(25px, 62px);
-		animation: anim-lines 4s 0.2s forwards infinite;
+		animation: anim-lines 2.5s 0.2s forwards;
 	}
 }
 
@@ -130,7 +131,7 @@ $box-shadow: 5px 5px 3px 0px rgba(20, 20, 20, 0.048);
 	}
 
 	100% {
-		width: 0%;
+		width: 100%;
 	}
 }
 
@@ -154,6 +155,15 @@ $box-shadow: 5px 5px 3px 0px rgba(20, 20, 20, 0.048);
 	}
 }
 
+@keyframes anim-bg-color {
+	0% {
+		background-color: white;
+	}
+
+	100% {
+		background-color: #F9F9F9;
+	}
+}
 
 .section-left, .section-right {
     position: fixed;
