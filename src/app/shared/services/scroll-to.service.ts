@@ -29,16 +29,15 @@ export class ScrollToService {
     public scroll(selector: string, duration: number = 1500): void {
         const existingComponents = [
             'app-banner',
-            'app-what-we-do',
             'app-contact',
-            'app-founder-story',
             'app-about-us'
         ];
         selector = existingComponents.find(component => component.includes(selector)) as string;
         
+        if (!selector) return;
+
         const element = document.querySelector(selector);
         let startY;
-        console.log(element);
 
         const scrollableContainer = this.currentScrollableContainer;
         
