@@ -137,6 +137,22 @@ h1 {
 	button {
 		width: 100%;
 	}
+
+	img {
+		object-fit: contain;
+	}
+
+	.right {
+		max-height: 290px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.with-description-flow .description {
+		text-align: left;
+	}
 }
 
 @media (max-width: 400px) and (max-height: 760px) {

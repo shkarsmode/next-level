@@ -1,5 +1,6 @@
 @import '/src/styles/mixin.scss';
 @include common-styles;
+@include button;
 
 .wrap-container {
 	background-image: url('/assets/img/hands.webp');
@@ -15,6 +16,27 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(255, 255, 255, 0.8);
+
+	}
+
+	&.isRevert {
+		button {
+			color: white;
+			border: 1px solid white;
+		}
+
+		h1 {
+			color: white;
+		}
+
+		.description {
+			color: white;
+		}
+
+		&::before {
+			background: linear-gradient(91deg, rgba(72, 72, 71, 0.80) 0%, rgba(72, 72, 71, 0.98) 100%);
+		}
+
 	}
 }
 
@@ -25,19 +47,14 @@
 
 .description {
 	max-width: 898px;
+	font-weight: 400;
 }
 
 button {
 	margin-top: 60px;
-	background-color: transparent;
+
 	border: 1px solid black;
-
-	font-size: 20px;
-	font-weight: 500;
-
 	color: black;
-	cursor: pointer;
 
-	width: 320px;
-	height: 70px;
+	margin-left: 0;
 }
