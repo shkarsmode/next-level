@@ -21,7 +21,10 @@
 
 	&.isRevert {
 		button {
-			color: white;
+			span {
+				color: white;
+			}
+			
 			border: 1px solid white;
 		}
 
@@ -52,9 +55,12 @@
 
 button {
 	margin-top: 60px;
-
-	border: 1px solid black;
-	color: black;
-
 	margin-left: 0;
+	border: 1px solid black;
+
+	span {
+		color: black;
+	}
+
+	
 }
