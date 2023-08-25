@@ -1,7 +1,7 @@
 export const aboutUsInfo = {
 	banner: {
 		title: 'About Us',
-		description: 'When we founded Next Level Oncology as a concierge practice, we were inspired by the courage, hope and endless trust that patients place in their physician throughout their journey from diagnosis to the end of life. We saw that when the patient and the physician are connected on the care journey, as if holding hands, while many unknowns remain, the patient never feels alone and hopeless and the best outcomes prevail.',
+		description: 'When we founded Next Level Oncology as a concierge practice, we were inspired by the courage, hope and endless trust that patients place in their physician throughout their journey from diagnosis to the end of life. We saw that when the patient and the physician are connected on the care journey, as if holding hands, while many unknowns remain, the patient never feels alone or hopeless and the best outcomes prevail.',
 		img: 'about-us.webp'
 	},
 	dark: [
