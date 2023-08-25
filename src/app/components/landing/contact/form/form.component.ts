@@ -28,6 +28,7 @@ import { UserService } from '../../../../shared/services/user.service';
     styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit, OnDestroy {
+
     public form: FormGroup;
     public isLoading: boolean = false;
     public isSubmitted: boolean = false;
@@ -55,8 +56,25 @@ export class FormComponent implements OnInit, OnDestroy {
 
     private getIsSubmittedAndFormData(): void {
         this.isSubmitted = !!localStorage.getItem('isFormSubmitted');
+        
         if (this.isSubmitted) {
             this.formData = JSON.parse(localStorage.getItem('fromData')!);
+            const formSubmittedTimeStr = localStorage.getItem('formSubmittedTime') as string;
+            const formSubmittedTime = parseInt(formSubmittedTimeStr, 10);
+
+            if (!formSubmittedTime) {
+                this.recordCurrentDateInMs();
+                return;
+            }
+
+            const currentTime = new Date().getTime();
+            const thirtyMinutes = 30 * 60 * 1000;
+
+            if (currentTime - formSubmittedTime >= thirtyMinutes) {
+                localStorage.removeItem('formSubmittedTime');
+                localStorage.removeItem('isFormSubmitted');
+                this.isSubmitted = false;
+            }
         }
     }
 
@@ -162,6 +180,8 @@ export class FormComponent implements OnInit, OnDestroy {
                 this.isLoading = false;
 
                 this.openLoginModalWindow();
+                this.recordCurrentDateInMs();
+                
             },
             error: (err) => {
                 if (err.status === 459) {
@@ -176,6 +196,11 @@ export class FormComponent implements OnInit, OnDestroy {
         });
 
         // await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    private recordCurrentDateInMs(): void {
+        const formSubmittedTime = new Date().getTime();
+        localStorage.setItem('formSubmittedTime', formSubmittedTime.toString());
     }
 
     public get name(): AbstractControl {
