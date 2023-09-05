@@ -18,7 +18,7 @@
 					Just as Dr Csiki began her MD/PhD studies, her grandfather was diagnosed with very advanced colorectal cancer. He passed away a few months after the diagnosis in 2001, never having received any treatment for the cancer due to his advanced illness and medical practice limitations of that time. Dr Csiki spent the remaining time of his life caring for him. His death in August 2001 left profound sadness but also determination to dedicate her career to advancing cancer research and enable patients the choice and opportunity to access therapies that can help live a better life.
 				</h4>
 			</div>
-			<div class="right showing-block" [ngClass]="{'active': isShowMore}">
+			<div class="right showing-block" [class.active]="isShowMore">
 				<p>
 					She completed her MD and the PhD in the field of Cancer Biology at Vanderbilt University, pursuing innovative research and later specialized in the care of cancer patients. It was this relentless pursuit of combining innovative cancer research with the best patient care and therapeutics available that got her excited to accept a faculty position at the University of Pennsylvania. At the Perelman Cancer Center at University of Pennsylvania she continued to focus on cancer research and care of cancer patients. <b>She took on clinical research positions at the top oncology companies including Merck and led development of novel drugs such as the immunotherapy, Keytruda.</b> After an exciting career on the East Coast, Dr Csiki was recruited to City of Hope in Southern California to continue advancing cancer research and care of patients. 
 					<b>She helped patients get access to innovative, novel medicines from biotechs when no further therapy was available yet patients wanted to continue to fight.</b> Through this process she became intimately familiar with the compassionate use program that patients can participate in and helped other physicians navigate this process.<br> <br> 
@@ -34,7 +34,7 @@
 			<span *ngIf="isShowMore">
 				Show less 
 			</span>
-			<svg [ngClass]="{'active': isShowMore}" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+			<svg [class.active]="isShowMore" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
 				<path d="M1 1L6 6L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
 			</svg>
 		</div>

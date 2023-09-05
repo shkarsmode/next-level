@@ -1,5 +1,5 @@
-<div class="wrap-container" [ngClass]="{'with-img': info?.img}">
-	<div class="container" [ngClass]="{'centered': info?.isCentered}">
+<div class="wrap-container" [class.with-img]="info?.img">
+	<div class="container" [class.centered]="info?.isCentered">
 		<div class="block">
 			<h1 data-aos="fade-up">{{ info.title }}</h1>
 			<div class="wrap-info" data-aos="fade-up">
