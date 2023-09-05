@@ -1,4 +1,4 @@
-<div class="wrap" [ngClass]="{'closing': !isLoading}">
+<div class="wrap" [class.closing]="!isLoading">
 	<div class="logo" (click)="isLoading = false">
 		<!-- <div class="left-border"></div>
 		<div class="top-border"></div>

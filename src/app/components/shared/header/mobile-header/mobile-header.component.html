@@ -1,4 +1,9 @@
-<div class="wrap-container" [ngClass]="{'sticky': isSticky, 'open': isOpenMenu}">
+<div 
+	class="wrap-container" 
+	[class]="{
+		sticky: isSticky, 
+		open: isOpenMenu
+	}">
 	<div class="container">
 		<header>
 			<img

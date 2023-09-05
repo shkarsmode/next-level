@@ -1,6 +1,6 @@
 <div 
-	class="wrap-container" 
-	[ngClass]="{'with-description-flow': info?.description}">
+	class="wrap-container"
+	[class.with-description-flow]="info?.description">
 	<div class="container">
 		<div class="left" lang="en">
 			<h1 
@@ -20,11 +20,11 @@
 		</div>
 		<div 
 			class="right" 
-			data-aos="fade" 
-			[ngClass]="{'with-white-filter': info?.isWhiteFilter}">
+			data-aos="fade"
+			[class.with-white-filter]="info?.isWhiteFilter">
 			<img 
-				[src]="'assets/img/' + info.img" 
-				[style]="'max-width:' + info?.maxPictureWidth + 'px'"
+				[src]="'assets/img/' + info.img"
+				[style.max-width.px]="info?.maxPictureWidth"
 				alt="banner">
 		</div>
 	</div>
