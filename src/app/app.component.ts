@@ -1,9 +1,10 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
 import AOS, { AosOptions } from 'aos';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html'
+    templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements AfterViewInit {
     private AOSConfig: AosOptions = {

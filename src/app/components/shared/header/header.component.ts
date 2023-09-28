@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CustomBreakpoints, CustomBreakpointsEnum } from '@shared/interfaces';
 import { ScrollToService } from '@shared/services';
 import { Subscription } from 'rxjs';
@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     constructor(
         private breakpointObserver: BreakpointObserver,
-        private scrollTo: ScrollToService
+        private scrollTo: ScrollToService,
+        private cdr: ChangeDetectorRef
     ) {
         this.subscribeOnBreakpointChanges();
     }
@@ -49,6 +50,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
                     .subscribe(result => {
                         if (result.matches) {
                             this.determineHansetForHeaders(CustomBreakpointsEnum[breakpoint]);
+                            this.cdr.markForCheck();
                         }
                     });
 

@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form [formGroup]="form" (ngSubmit)="onSubmitEvent()">
 	<div class="field">
 		<input 
 			type="text" 
@@ -55,7 +55,7 @@
 			name="location"
 			placeholder="City"
 			formControlName="location"
-			(keyup)="onChangeLocation($event)"
+			(keyup)="onChangeLocationEvent($event)"
 			[matAutocomplete]="auto">
 		<mat-autocomplete #auto="matAutocomplete">
 			<mat-option *ngFor="let city of autocompleteLocations" [value]="city.formatted">
@@ -110,7 +110,6 @@
 		[disabled]="form.invalid && form.touched">
 		Submit
 	</button>
-
 	<div class="wrap-loading" *ngIf="isLoading || isSubmitted">
 		<mat-spinner *ngIf="isLoading"></mat-spinner>
 		<ng-container *ngIf="isSubmitted">

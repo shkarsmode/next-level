@@ -13,7 +13,14 @@
 					care@nextleveloncology.com</a>
 			</div>
 		</div>
-		<app-form></app-form>
+		<app-form 
+			[formData]="formData"
+			[isLoading]="isLoading"
+			[isSubmitted]="isSubmitted"
+			[autocompleteLocations]="autocompleteLocations"
+			(onChangeLocation)="onChangeLocation($event)"
+			(onSubmit)="onSubmitForm($event)">
+		</app-form>
 	</div>
 	<div class="container">
 		<p class="disclaimer">
