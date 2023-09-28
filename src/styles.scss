@@ -5,12 +5,12 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~aos/dist/aos.css';
 
-
 * {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	color: #1D1D1B;
 }
+html, body { height: 100%; }
 
 @font-face {
 	font-family: 'Material Symbols Outlined';
@@ -119,8 +119,6 @@ button {
 	font-weight: 500;
 	color: #FFF;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 button.mat-mdc-snack-bar-action.mdc-button.mat-mdc-button {
 	width: auto !important;

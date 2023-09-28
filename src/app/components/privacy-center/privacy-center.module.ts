@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
-
+import {
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent
+} from '@components/privacy-center';
 
 
 @NgModule({
@@ -10,8 +11,6 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
         PrivacyPolicyComponent,
         TermsAndConditionsComponent
     ],
-    imports: [
-        CommonModule
-    ]
+    imports: [CommonModule]
 })
 export class PrivacyCenterModule { }

@@ -8,6 +8,9 @@ import {
 } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ThankYouComponent } from '@shared/dialogs';
+import { IGeoLocation, ISubmitForm } from '@shared/interfaces';
+import { AutocompleteService, UserService } from '@shared/services';
 import {
     Subject,
     Subscription,
@@ -16,11 +19,6 @@ import {
     tap,
     throttleTime,
 } from 'rxjs';
-import { ThankYouComponent } from 'src/app/shared/dialogs/thank-you/thank-you.component';
-import { IGeoLocation } from 'src/app/shared/interfaces/IAutocomplete';
-import { ISubmitForm } from 'src/app/shared/interfaces/ISubmitForm';
-import { AutocompleteService } from '../../../../shared/services/autocomplete.service';
-import { UserService } from '../../../../shared/services/user.service';
 
 @Component({
     selector: 'app-form',
@@ -28,7 +26,6 @@ import { UserService } from '../../../../shared/services/user.service';
     styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit, OnDestroy {
-
     public form: FormGroup;
     public isLoading: boolean = false;
     public isSubmitted: boolean = false;
@@ -56,10 +53,12 @@ export class FormComponent implements OnInit, OnDestroy {
 
     private getIsSubmittedAndFormData(): void {
         this.isSubmitted = !!localStorage.getItem('isFormSubmitted');
-        
+
         if (this.isSubmitted) {
             this.formData = JSON.parse(localStorage.getItem('fromData')!);
-            const formSubmittedTimeStr = localStorage.getItem('formSubmittedTime') as string;
+            const formSubmittedTimeStr = localStorage.getItem(
+                'formSubmittedTime'
+            ) as string;
             const formSubmittedTime = parseInt(formSubmittedTimeStr, 10);
 
             if (!formSubmittedTime) {
@@ -134,10 +133,8 @@ export class FormComponent implements OnInit, OnDestroy {
                 ],
             ],
             location: [
-                location, [
-                    Validators.required, 
-                    this.customLocationValidator.bind(this)
-                ]
+                location,
+                [Validators.required, this.customLocationValidator.bind(this)],
             ],
             message: [message, [Validators.minLength(10)]],
         });
@@ -181,7 +178,6 @@ export class FormComponent implements OnInit, OnDestroy {
 
                 this.openLoginModalWindow();
                 this.recordCurrentDateInMs();
-                
             },
             error: (err) => {
                 if (err.status === 459) {

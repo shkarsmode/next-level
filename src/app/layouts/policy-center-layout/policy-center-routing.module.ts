@@ -4,17 +4,22 @@ import { PrivacyPolicyComponent } from 'src/app/components/privacy-center/privac
 import { TermsAndConditionsComponent } from 'src/app/components/privacy-center/terms-and-conditions/terms-and-conditions.component';
 import { PolicyCenterLayoutComponent } from './policy-center-layout.component';
 
+export const PRIVACY_POLICY_PATH: string = 'privacy-policy';
+export const TERMS_AND_CONDITIONS_PATH: string = 'privacy-policy';
+
 const routes: Routes = [
 	{ 
 		path: '', component: PolicyCenterLayoutComponent, children: [
 			{
-				path: 'privacy-policy', component: PrivacyPolicyComponent
+				path: PRIVACY_POLICY_PATH, 
+				component: PrivacyPolicyComponent
 			},
 			{
-				path: 'terms-and-conditions', component: TermsAndConditionsComponent
+				path: TERMS_AND_CONDITIONS_PATH, 
+				component: TermsAndConditionsComponent
 			},
 			{
-				path: '**', redirectTo: 'privacy-policy'
+				path: '**', redirectTo: PRIVACY_POLICY_PATH
 			}
 		]
 	}

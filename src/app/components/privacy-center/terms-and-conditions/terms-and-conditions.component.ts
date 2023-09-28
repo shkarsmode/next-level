@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './terms-and-conditions.component.html',
     styleUrls: ['./terms-and-conditions.component.scss']
 })
-export class TermsAndConditionsComponent {
-
-}
+export class TermsAndConditionsComponent {}

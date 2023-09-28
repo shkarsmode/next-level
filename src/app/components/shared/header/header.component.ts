@@ -1,8 +1,8 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { CustomBreakpoints, CustomBreakpointsEnum } from '@shared/interfaces';
+import { ScrollToService } from '@shared/services';
 import { Subscription } from 'rxjs';
-import { CustomBreakpoints, CustomBreakpointsEnum } from 'src/app/shared/interfaces/ICustomBreakpoints';
-import { ScrollToService } from 'src/app/shared/services/scroll-to.service';
 
 @Component({
     selector: 'app-header',

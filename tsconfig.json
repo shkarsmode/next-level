@@ -24,7 +24,29 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@shared/components": ["./src/app/shared/components"],
+      "@shared/components/*": ["./src/app/shared/components/*"],
+      "@shared/data": ["./src/app/shared/data"],
+      "@shared/data/*": ["./src/app/shared/data/*"],
+      "@shared/dialogs": ["./src/app/shared/dialogs"],
+      "@shared/dialogs/*": ["./src/app/shared/dialogs/*"],
+      "@shared/interfaces": ["./src/app/shared/interfaces"],
+      "@shared/interfaces/*": ["./src/app/shared/interfaces/*"],
+      "@shared/materials": ["./src/app/shared/materials"],
+      "@shared/materials/*": ["./src/app/shared/materials/*"],
+      "@shared/pipes": ["./src/app/shared/pipes"],
+      "@shared/pipes/*": ["./src/app/shared/pipes/*"],
+      "@shared/services": ["./src/app/shared/services"],
+      "@shared/services/*": ["./src/app/shared/services/*"],
+      "@components/landing": ["./src/app/components/landing"],
+      "@components/landing/*": ["./src/app/components/landing/*"],
+      "@components/privacy-center": ["./src/app/components/privacy-center"],
+      "@components/privacy-center/*": ["./src/app/components/privacy-center/*"],
+      "@components/shared": ["./src/app/components/shared"],
+      "@components/shared/*": ["./src/app/components/shared/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

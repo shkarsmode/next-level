@@ -1,4 +1,6 @@
-export const environment = {
+import { IEnvironment } from "@shared/interfaces";
+
+export const environment: IEnvironment = {
 	production: false,
 	basePathApi: 'https://next-level-back.vercel.app',
 	geoPathAPI: 'https://api.geoapify.com/v1/geocode/autocomplete',

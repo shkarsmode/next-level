@@ -3,16 +3,14 @@ import AOS, { AosOptions } from 'aos';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    templateUrl: './app.component.html'
 })
 export class AppComponent implements AfterViewInit {
-    
-    private AOSConfig: AosOptions = { 
-        once: false, 
-        duration: 500, 
+    private AOSConfig: AosOptions = {
+        once: false,
+        duration: 500,
         anchorPlacement: 'top-top',
-        offset: 50
+        offset: 50,
     };
 
     public ngAfterViewInit(): void {
@@ -22,7 +20,8 @@ export class AppComponent implements AfterViewInit {
 
     private greetingLogInConsole(): void {
         console.clear();
-        console.log('%cNextLevel Oncology ❤️', 
+        console.log(
+            '%cNextLevel Oncology ❤️',
             `
                 padding: 0.4rem 1.5rem; 
                 font-family: "Lucida Console"; 
@@ -35,5 +34,4 @@ export class AppComponent implements AfterViewInit {
     }
 
     private initAOSModule = () => AOS.init(this.AOSConfig);
-
 }
