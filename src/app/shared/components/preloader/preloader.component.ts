@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-preloader',
@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PreloaderComponent {
     @Input() isLoading: boolean = true;
+
+    constructor(private cdr: ChangeDetectorRef) {}
 
     public ngOnInit(): void {
         this.removePreloaderForDevelopment();
@@ -19,6 +21,9 @@ export class PreloaderComponent {
             return;
         }
 
-        setTimeout(() => (this.isLoading = false), 2700);
+        setTimeout(() => {
+            this.isLoading = false;
+            this.cdr.markForCheck();
+        }, 2700);
     }
 }
