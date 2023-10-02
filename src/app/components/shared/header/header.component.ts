@@ -27,11 +27,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.determineShowingHeader();
     }
 
-    @HostListener('window:scroll')
+    @HostListener('document:scroll')
     public determineShowingHeader(): void {
         const currentScroll = window.scrollY;
         this.isSticky = currentScroll > 200 ? true : false;
-        alert('windows scroll: ' + currentScroll);
+        // alert('windows scroll: ' + currentScroll);
     }
 
     public async onClickList(
