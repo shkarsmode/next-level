@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ThankYouComponent } from '@shared/dialogs';
@@ -16,7 +16,8 @@ import {
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss']
+    styleUrls: ['./contact.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactComponent implements OnInit, OnDestroy {
     public autocompleteLocations: IGeoLocation[] = [];
