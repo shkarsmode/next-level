@@ -12,10 +12,10 @@ export class LandingLayoutComponent {
     constructor(private router: Router) { }
 
     public ngOnInit(): void {
-        this.scrollToTop();
+        this.initScrollToTopObserver();
     }
 
-    public scrollToTop(): void {
+    public initScrollToTopObserver(): void {
         this.router.events
             .pipe(delay(100))
             .subscribe(() => window.scrollTo(0, 0));
