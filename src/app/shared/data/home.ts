@@ -5,7 +5,7 @@ export const homeInfo = {
 	},
 	dark: [
 		{
-			title: 'Combining Compassion and Expertise for Unparalleled Cancer prevention and Care',
+			title: 'Combining Compassion and Expertise for Unparalleled Cancer Prevention and Care',
 			description: 'Caring about you and listening to your needs is at the heart of the practice. Our services are designed to fit your changing needs spanning prevention, early detection, conventional treatments and cutting edge therapies. We aim to bridge the gap between what is available and what is possible.',
 			// buttonLink: '/compassionate-use'
 		},
