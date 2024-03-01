@@ -5,19 +5,19 @@ export const homeInfo = {
 	},
 	dark: [
 		{
-			title: 'Combining Compassion and Expertise for Unparalleled Cancer Care',
-			description: 'Caring about you and listening to your needs is at the heart of the practice. Our services are designed to fit your changing needs from conventional treatments to cutting edge compassionate use therapies. We aim to bridge the gap between what is available and what is possible.',
-			buttonLink: '/compassionate-use'
+			title: 'Combining Compassion and Expertise for Unparalleled Cancer prevention and Care',
+			description: 'Caring about you and listening to your needs is at the heart of the practice. Our services are designed to fit your changing needs spanning prevention, early detection, conventional treatments and cutting edge therapies. We aim to bridge the gap between what is available and what is possible.',
+			// buttonLink: '/compassionate-use'
 		},
 		{
 			title: 'Highest Level of Personalized Care',
-			description: 'Our care team members strive to provide the highest level of personalized care fit for each person\'s need. <br><br> We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge treatments and thus being able to access them and provide the best care.'
+			description: 'Our care team members strive to provide the highest level of personalized care fit for each person\'s needs. <br><br> We are knowledge-driven and passionate about the research and discoveries that drive cutting-edge approaches and thus being able to access them and provide the best health outcomes.'
 		}
 	],
 	grey: [
 		{
 			title: 'Personalized Approach and Attention to Every Detail',
-			description: 'Better cancer care and improved wellness outcomes because of deep relationships and ongoing conversations throughout the shared cancer care journey with your concierge physician.',
+			description: 'Better cancer care and improved wellness outcomes because of deep relationships and ongoing conversations throughout the shared cancer prevention and care journey with your concierge physician.',
 		},
 		{
 			title: 'Care that is Highly Personal and Exceptional',
@@ -31,7 +31,7 @@ export const homeInfo = {
 	white: [
 		{
 			title: 'Complete Privacy and Discretion',
-			description: 'Maintaining confidentiality and providing all services with maximal discretion is at the core of the practice and  one of its essential values',
+			description: 'Maintaining confidentiality and providing all services with maximal discretion is at the core of the practice and one of its essential values',
 			isCentered: true 
 		},
 		{
@@ -54,12 +54,12 @@ export const homeInfo = {
 			{
 				image: 'wellness',
 				header: 'Prevention and Wellness',
-				description: 'Cutting-edge diagnostics and preventative care focused on breakthrough science for best prevention and overall health'
+				description: 'Cutting-edge diagnostics and preventative care focused on breakthrough science for prevention and longevity maximizing health and wellness'
 			},
 			{
 				image: 'support',
 				header: 'Integrative Family Care',
-				description: 'An integrated approach from prevention to care focused on the changing needs with time of each family member'
+				description: 'An integrated approach from prevention to care focussed on the changing needs with time of each family member'
 			},
 		]
 	}
