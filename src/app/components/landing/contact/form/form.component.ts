@@ -70,7 +70,7 @@ export class FormComponent implements OnInit {
             ],
             location: [
                 location,
-                [Validators.required, this.customLocationValidator.bind(this)],
+                [Validators.required, ], //this.customLocationValidator.bind(this)
             ],
             message: [message, [Validators.minLength(10)]],
         });

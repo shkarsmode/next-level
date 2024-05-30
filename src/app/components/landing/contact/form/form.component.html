@@ -52,12 +52,13 @@
 	<div class="field">
 		<input 
 			type="text"
-			name="location"
+			name="city"
+			autoComplete="home city"
 			placeholder="City"
-			formControlName="location"
-			(keyup)="onChangeLocationEvent($event)"
-			[matAutocomplete]="auto">
-		<mat-autocomplete #auto="matAutocomplete">
+			formControlName="location">
+			<!-- (keyup)="onChangeLocationEvent($event)"> -->
+			<!-- [matAutocomplete]="auto"> -->
+		<!-- <mat-autocomplete #auto="matAutocomplete">
 			<mat-option *ngFor="let city of autocompleteLocations" [value]="city.formatted">
 				<div class="wrap-select">
 					<div class="icon">
@@ -74,7 +75,7 @@
 					</div>
 				</div>
 			</mat-option>
-		</mat-autocomplete>
+		</mat-autocomplete> -->
 		<div 
 			class="hint error"
 			*ngIf="location.invalid && location.touched">
