@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { privateLinksGuard } from 'src/app/shared/helpers/private-links.guard';
 import { AboutUsLayoutComponent } from './components/about-us-layout/about-us-layout.component';
 import { CompassionateLayoutComponent } from './components/compassionate-layout/compassionate-layout.component';
 import { FounderLayoutComponent } from './components/founder-layout/founder-layout.component';
@@ -16,8 +17,12 @@ const routes: Routes = [
 			},
 			{ path: '', component: MainLayoutComponent },
 			{ path: 'about-us', component: AboutUsLayoutComponent },
-			{ path: 'founders-story', component: FounderLayoutComponent },
-			{ path: 'compassionate-use', component: CompassionateLayoutComponent },
+			{ 
+				path: 'founders-story', 
+				component: FounderLayoutComponent, 
+				canActivate: [privateLinksGuard]
+			},
+			{ path: 'compassionate-use', component: CompassionateLayoutComponent }
 		]
 	},
 	// { path: '**', redirectTo: '' }
