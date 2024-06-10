@@ -5,7 +5,7 @@ import { TermsAndConditionsComponent } from 'src/app/components/privacy-center/t
 import { PolicyCenterLayoutComponent } from './policy-center-layout.component';
 
 export const PRIVACY_POLICY_PATH: string = 'privacy-policy';
-export const TERMS_AND_CONDITIONS_PATH: string = 'privacy-policy';
+export const TERMS_AND_CONDITIONS_PATH: string = 'terms';
 
 const routes: Routes = [
 	{ 
