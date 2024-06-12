@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
     private greetingLogInConsole(): void {
         console.clear();
         console.log(
-            '%cNextLevel Oncology ❤️',
+            '%cNextLevel Cancer Care ❤️',
             `
                 padding: 0.4rem 1.5rem; 
                 font-family: "Lucida Console"; 
