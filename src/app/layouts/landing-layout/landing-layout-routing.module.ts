@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { privateLinksGuard } from 'src/app/shared/helpers/private-links.guard';
 import { AboutUsLayoutComponent } from './components/about-us-layout/about-us-layout.component';
 import { CompassionateLayoutComponent } from './components/compassionate-layout/compassionate-layout.component';
-import { FounderLayoutComponent } from './components/founder-layout/founder-layout.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { LandingLayoutComponent } from './landing-layout.component';
 
